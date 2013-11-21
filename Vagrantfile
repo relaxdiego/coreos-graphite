@@ -19,4 +19,7 @@ Vagrant.configure("2") do |config|
 
 
   config.vm.provision 'shell', path: 'vagrant/provision.sh'
+
+  # Workaround for bug https://github.com/coreos/docs/issues/21
+  config.vm.provision 'shell', inline: 'sudo systemctl start etcd'
 end
