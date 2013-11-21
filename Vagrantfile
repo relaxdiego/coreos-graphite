@@ -18,5 +18,5 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder ".", "/home/core/share", id: "core", :nfs => true,  :mount_options   => ['nolock,vers=3,udp']  
 
 
-  config.vm.provision 'shell', path: 'provision.sh'
+  config.vm.provision 'shell', path: 'vagrant/provision.sh'
 end
