@@ -4,7 +4,7 @@ After=graphite.service
 
 [Service]
 Restart=always
-ExecStart=/usr/bin/docker run relaxdiego/graphite_dummy_data /usr/local/bin/ruby /opt/dummy_data/start
+ExecStart=/usr/bin/docker run -p 2009:2009 relaxdiego/graphite_dummy_data /opt/dummy_data/start
 
 [Install]
 WantedBy=local.target
